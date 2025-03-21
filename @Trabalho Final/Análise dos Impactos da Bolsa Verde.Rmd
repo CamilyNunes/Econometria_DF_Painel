@@ -20,11 +20,20 @@ PACOTES USADOS
 library(tidyverse)
 library(fixest)
 library(readr)
+library(readxl)
+library(httr)
+library(curl)
 ```
 
-
-
 DATA FRAME IMPORTADO
+
+Definir a URL do arquivo
+
+Como o link fornecido está em formato bruto (raw), ele pode ser acessado diretamente:
+```{r}
+url <- "https://github.com/CamilyNunes/Econometria_DF_Painel/raw/refs/heads/main/@Trabalho%20Final/PROGRAMA_BOLSA_VERDE/Dados/Bando_dados_final.xlsx"
+
+```
 
 
 
