@@ -1,0 +1,39 @@
+---
+title: "Análise dos Impactos da Bolsa Verde: Uma Abordagem de Efeitos Fixos e Aleatórios"
+author: "Camily Nunes dos Santos"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true               # Ativa o índice
+    toc_float: 
+      collapsed: false      # Expande o índice automaticamente
+      smooth_scroll: true   # Rolagem suave ao clicar no índice
+      position: "left"      # Posição
+    theme: cosmo            # Tema Bootstrap para o HTML
+    highlight: tango         # Destacar a sintaxe em R
+    css: " "       # Arquivo CSS personalizado
+---
+
+PACOTES USADOS
+```{r}
+# Carregar pacotes
+library(tidyverse)
+library(fixest)
+library(readr)
+```
+
+
+
+DATA FRAME IMPORTADO
+
+
+
+INTRODUÇÃO
+
+
+
+METODOLOGIA
+
+
+
+RESULTADOS
