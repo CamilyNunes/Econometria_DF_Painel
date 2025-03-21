@@ -11,11 +11,12 @@ output:
       position: "left"      # Posição
     theme: cosmo            # Tema Bootstrap para o HTML
     highlight: tango         # Destacar a sintaxe em R
-    css: " "       # Arquivo CSS personalizado
+    #css: " "       # Arquivo CSS personalizado
 ---
 
-PACOTES USADOS
-```{r}
+## PACOTES USADOS
+
+```{r, message=FALSE, warning=FALSE}
 # Carregar pacotes
 library(tidyverse)
 library(fixest)
@@ -25,24 +26,29 @@ library(httr)
 library(curl)
 ```
 
-DATA FRAME IMPORTADO
+## DATA FRAME IMPORTADO
 
-Definir a URL do arquivo
+1.  Definir a URL do arquivo
 
 Como o link fornecido está em formato bruto (raw), ele pode ser acessado diretamente:
+
 ```{r}
 url <- "https://github.com/CamilyNunes/Econometria_DF_Painel/raw/refs/heads/main/@Trabalho%20Final/PROGRAMA_BOLSA_VERDE/Dados/Bando_dados_final.xlsx"
-
 ```
 
+2.  Baixar e ler o arquivo
 
+Carregar o arquivo diretamente sem baixar para o computador
+
+```{r}
+temp_file <- tempfile(fileext = ".xlsx")  # Criar um arquivo temporário
+download.file(url, temp_file, mode = "wb")  # Baixar o arquivo
+dados <- read_excel(temp_file)  # Ler os dados
+unlink(temp_file)  # Apagar o arquivo temporário
+```
 
 INTRODUÇÃO
 
-
-
 METODOLOGIA
-
-
 
 RESULTADOS
